@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dot{
+    transform: translate(-50%, 90%);
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: rgb(90, 118, 207);
+    border-radius: 50%;
+}
+
+.browser-el{
+    max-width: 10rem;
+}
+
+.min-value{
+    transform: translate(-50%,0);
+}
+
+.max-value{
+    transform: translate(50%,0);
+}

@@ -3,10 +3,10 @@ const Browser = ( props ) => {
     const browsers = props.data.data.query.meta
 
     return(
-        <ul className="browser-el">
-            {/* {browsers.map(({ key, title }) => {
-                return <li key={key}>{title}</li>
-            })} */}
+        <ul className="browser-el flex flex-col gap-2.5 justify-end">
+            {browsers.map(({ key, title }) => {
+                return <li key={key} className='truncate'> {title} </li>
+                })}
         </ul>
     )
 }

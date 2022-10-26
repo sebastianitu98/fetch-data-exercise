@@ -17,11 +17,13 @@ function App() {
     .then(newRes => setData(newRes))
   }, [])
 
-  
+    
   return (
     <div className="App">
-      { data && <Component colConfig={data.data.config1} data={ data } /> }
-      {/* { data && <Component colConfig={data.data.config2} data={ data } /> } */}
+      
+      { data && <Component colConfig={data.config1} data={ data } /> }
+      <br />
+      { data && <Component colConfig={data.config2} data={ data } /> }
     </div>
   )
 }

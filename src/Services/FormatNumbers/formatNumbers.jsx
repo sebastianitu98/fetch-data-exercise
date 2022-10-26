@@ -1,4 +1,4 @@
-export const formatNumber = (num) => {
+export const formatNumber = (num , decimals) => {
     num = num.toString().replace(/[^0-9.]/g, '');
     if (num < 1000) {
         return num;
@@ -17,5 +17,11 @@ export const formatNumber = (num) => {
             break;
         }
     }
-    return (num / si[index].v).toFixed(2).replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1") + si[index].s;
+    return (num / si[index].v).toFixed(decimals).replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1") + si[index].s;
+}
+
+
+export const formatNumberForPercentage = (num , decimals) => {
+    let percent = parseFloat(num ).toFixed(decimals) + "%";
+    return percent;
 }

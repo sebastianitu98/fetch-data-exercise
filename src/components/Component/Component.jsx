@@ -1,16 +1,20 @@
 import Browser from '../Browser/Browser'
-import NetImpressions from '../NetImpressions/NetImpressions'
-import AdSlots from '../AdSlots/AdSlots'
-import FillRate from '../FillRate/FillRate'
+import ColumnComponent from '../ColumnComponent/ColumnComponent'
 
 
 const Component = ( props ) => {
+    
+    /** 
+     *the colNumber attribute represents the 
+     *column position in the array i'll iterate later
+    */
+
     return(
-        <div className='grid grid-cols-4 my-4'>
+        <div className='flex my-4 mx-4'>
             <Browser data={ props.data }/>
-            <NetImpressions data={ props.data }/>
-            <AdSlots data={ props.data }/>
-            <FillRate data={ props.data }/>
+            <ColumnComponent colConfig={props.colConfig} data={ props.data } colNumber={1} name={'Net Impressions'} />
+            <ColumnComponent colConfig={props.colConfig} data={ props.data } colNumber={2} name={'Ad Slots'} />
+            <ColumnComponent colConfig={props.colConfig} data={ props.data } colNumber={3} name={'Fill Rate'} />
         </div>
     )
 }
